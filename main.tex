@@ -1,0 +1,277 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{changepage}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage[shortlabels]{enumitem}
+\usepackage{microtype, xspace}
+\usepackage{hyperref}
+
+\newcommand{\hmargin}{2.5cm}
+\geometry{top=2.0cm,
+    bottom=2.0cm,
+    left=\hmargin,
+    right=\hmargin}
+\hypersetup{colorlinks=true, linkcolor=cyan, urlcolor=cyan}
+
+\pagenumbering{gobble}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist{topsep=0pt, itemsep=0pt}
+
+% Footer configuration
+%--------------------------------------------%
+\usepackage{fancyhdr, extramarks}
+\pagestyle{fancy}
+
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\lfoot{\color{gray}\today}
+% \cfoot{\thepage}
+\cfoot{\color{gray}\textsc{Ryan Selesnik}}
+% \fancyfoot[C]{\small \textit{e code available at \textup{\href{https://github.com/ejmastnak/cv}{\texttt{github.com/ejmastnak/cv}}} under the \textup{CC BY-NC-SA 4.0} license.}}
+
+% \renewcommand{\sectionmark}[1]{
+%     \markboth{\thesection. \ #1}
+%     {\noexpand\firstsubsectiontitle}
+%     \global\firstsubsectionmarktrue}
+% \renewcommand{\subsectionmark}[1]{
+%     \markright{\thesubsection. \, #1}
+%     \iffirstsubsectionmark
+% \edef\firstsubsectiontitle{\thesubsection. \, #1}
+% \fi
+% \global\firstsubsectionmarkfalse}
+% \newif\iffirstsubsectionmark
+% \def\firstsubsectiontitle{}
+
+\setlength{\headheight}{14pt} 
+%--------------------------------------------%
+% End footer configuration
+
+% BEGIN CUSTOM MACROS
+% --------------------------------------------- %
+\newcommand{\rangesep}{to\xspace}  % for date ranges
+\renewcommand{\date}[1]{\textit{#1}}
+\newcommand{\location}[1]{\textit{#1}}
+\newcommand{\contentType}[1]{\textit{#1}}
+
+\newcommand{\heading}[1]{
+\makebox[0pt][l]{\Large \sc \hspace{2pt}#1}
+\rule[-0.7ex]{\columnwidth}{0.5pt}\vspace{1.0ex}
+}
+
+\newcommand{\subheading}[1]{{\bfseries #1}}
+\newcommand{\generalInfoSkip}{\vspace{0.3ex}}
+\newcommand{\subheadSkip}{\vspace{0.7ex}}
+\newcommand{\contentIndent}{\hspace{1em}}
+% --------------------------------------------- %
+% END CUSTOM MACROS
+
+
+% BEGIN CUSTOM ENVIRONMENTS
+% --------------------------------------------- %
+\newenvironment{mysection}[1]
+{\vspace{2.5ex}
+\heading{#1}
+\begin{adjustwidth}{0.3cm}{0cm}}
+{\end{adjustwidth} }
+
+\newenvironment{entry}
+\par
+{\vspace{0.1ex}}
+{}
+% --------------------------------------------- %
+% END CUSTOM ENVIRONMENTS
+\begin{document}
+
+\begin{center}
+ \textsc{\textbf{\huge Ryan Selesnik}}
+
+\vspace{.2em}
+\footnotesize{\textit{Johannesburg, South Africa}}
+\\
+\vspace{.25em}
+\centering
+\footnotesize{
+\begin{tabular}{c|c|c}
+
+ \href{mailto:selesnikryan@gmail.com}{selesnikryan@gmail.com}     &  \texttt{+}27~799~932252  & \href{https://www.linkedin.com/in/ryan-s-09850613b/}{LinkedIn} 
+    
+\end{tabular}}
+
+\end{center}
+
+
+
+    
+ \begin{mysection}{General Information}
+        \textbf{Citizenship:} South Africa
+
+        \generalInfoSkip
+        \textbf{Fluent languages:} English
+
+        \generalInfoSkip
+        \textbf{Skills include:} A strong programming background in C/C\texttt{++} and Python; Extensive experience simulating control, stochastic, and communication systems using LTspice, \textsc{Matlab}, and \textsc{Simulink}; Data analysis and visualisation using the scientific Python stack (NumPy, Matplotlib, Pandas); Machine Learning with PyTorch, HuggingFace and scikit-learn; Proficient in Bash/Zsh and the Unix core utilities; Working with Linux, macOS, and Windows; Git and GitHub; {\LaTeX}; Oscilloscopes; Full-stack webdevelopment; Automating developer environments with Vim and shell scripts. 
+        
+        % teaching introductory through undergraduate physics, mathematics, signal processing, and computer programming;
+        % the scientific Python stack (NumPy, Matplotlib, SciPy);
+        % {\LaTeX}, including real-time-speed transcription of handwritten math;
+        % vector graphics (Tikz; Inkscape);
+        % Bash scripting and the Unix core utilities;
+        % working on a \texttt{systemd} Linux system;
+        % Git and GitHub.
+    \end{mysection} 
+% I am a creative Electrical \& Information Engineer interested in Data Science, Mathematics, and problem-solving. I enjoy learning new things, particularly in the fields of machine learning, computer science, physics, mathematics, and psychology, and applying them to everyday life. I am an avid programmer whose skills have been honed from working with computers from a young age, my degree, as well as work experience, and personal projects. I enjoy customising my programming setup, reading, listening to and producing music.
+
+% As an Electrical \& Information Engineer, I have developed a strong interest in mathematics and engineering. My favourite courses during my degree were Control, Probabilistic Systems Analysis, Signals and Systems, Communication Fundamentals, Mathematics, and Microprocessors. I have extensive simulation experience using tools such as \textsc{Matlab}, LTspice, and \textsc{Simulink}, where I have utilized them to simulate communication, control, and probabilistic systems. In addition, I have practical experience working with oscilloscopes and building physical control systems, such as a switch-mode power supply. I am also a skilled programmer, having honed my skills through a combination of my degree, work experience, and personal projects.
+
+\begin{mysection}{Education}
+        \subheading{The University of the Witwatersrand} \hfill \location{Johannesburg, South Africa}
+
+        \textit{BSc (Eng) Electrical \& Infromation Engineering} (with Distinction) \hfill \date{2019 \rangesep  2021}
+            
+        \subheadSkip
+        \subheading{King David High School, Linksfiel} \hfill  \location{Johannesburg, South Africa}
+
+      \textit{National Senior Certificate (Independent Examination Board)} \hfill \date{2014 \rangesep 2018}
+    \end{mysection}
+\begin{mysection}{Experience}
+ \subheadSkip
+        \subheading{Stream -- A Division of VAT IT} \hfill \location{Johannesburg, South Africa}
+
+        \textit{Software Engineering Intern}  \hfill \date{Nov 2020 \rangesep Jan 2021}
+
+        \begin{itemize}
+            \item Developed a versatile PDF generation system using Ruby, JSON, and Microsoft's Mail Merge.
+            \item Enabled non-technical employees to generate customer--specific PDFs, without relying on the software development team, thereby minimising Stream's opportunity costs.
+        \end{itemize}   
+\subheadSkip
+        \subheading{Stream -- A Division of VAT IT} \hfill \location{Johannesburg, South Africa}
+
+        \textit{Software Engineering Intern}  \hfill \date{Dec 2021 \rangesep Jan 2022}
+
+        \begin{itemize}
+         \item Wrote a Ruby script to parse PDFs to structured data. This eliminated the tedious task of looking up duty and tax information for imported products.
+    \item Developed a customisable message dashboard system using a headless Content Management System, Vue, Node.js, HTML, and CSS, enabling non-technical employees to edit Stream's website directly.
+    \item Wrote two sets of comprehensive documentation for the dashboard system. One for the developers and another for the non-technical employees.
+        \end{itemize}           
+\end{mysection}
+
+\begin{mysection}{Projects}
+    
+ \subheading{Final Year Investigation Project}
+         
+     \begin{itemize}
+     \item       Conducted an investigation into a \href{https://github.com/RyanSelesnik/AI-Toy}{low--cost AI toy} that can assist in Early Childhood Development. 
+
+         \item Implemented speech recognition and natural language understanding capabilities using modern ML models such as OpenAI's Whisper and Transformers.
+            \item Ported the speech recognition model to a Raspberry Pi and used a children's speech dataset to assess the performance of offline children's speech recognition
+     \end{itemize} 
+\subheadSkip   
+ \subheading{Final Year Design Project} 
+ \begin{itemize}
+     \item Designed a therapeutic chatbot using GPT-2 and Reinforcement Learning.
+     \item Adapted the input context of GPT-2 and used an empathetic reward function as part of the training objective.
+ \end{itemize} 
+ \subheadSkip
+\subheading{IMU data analysis} 
+\begin{itemize}
+    \item Designed and built a temperature sensor using the ATmega328P and programmed the logic in Assembly.
+\end{itemize}
+ \subheadSkip
+\subheading{Switch-mode Power Supply} 
+\begin{itemize}
+    \item Simulated and built a switch-mode power supply based on the buck converter topology, achieving an output ripple of less than 1\%.
+\end{itemize}
+ \subheadSkip
+\subheading{Temperature Sensor} 
+\begin{itemize}
+    \item Designed and built a temperature sensor using the ATmega328P and programmed the logic in Assembly.
+\end{itemize}
+ \subheadSkip
+\subheading{Multi-player Worlde} 
+\begin{itemize}
+    \item Collaborated with a team of 5 to develop \href{https://github.com/witseie-elen4010/2022-group-lab-001}{MultiWordle}, a multiplayer version of Wordle. The tech--stack included JavaScript, Express, HTML, CSS, GitHub Actions, and MongoDB. 
+\end{itemize}
+ \subheadSkip
+
+\subheading{Centipede\texttt{++}} 
+\begin{itemize}
+    \item Collaborated with a team of 2 to develop the Centipede computer game in C\texttt{++}.
+\end{itemize}
+
+
+\end{mysection}
+% \subsection{Final Year Investigation Project}
+
+% Conducted an investigation into a \href{https://github.com/RyanSelesnik/AI-Toy}{low--cost AI toy} that can assist in Early Childhood Development. The toy was designed to have speech recognition and natural language understanding capabilities using modern ML models such as OpenAI's Whisper and Transformers. Furthermore, the speech recognition component was ported to a Raspberry Pi and a children's speech dataset was used to assess the performance of offline children's speech recognition.
+
+% \subsection{Final Year Design Project}
+% Designed a therapeutic chatbot using GPT-2 and Reinforcement Learning. The chatbot was designed to produce relevant, coherent, and empathetic responses by adapting the input context of GPT-2 and using an empathetic reward function as part of the training objective.
+
+% \subsection{Switch-mode Power Supply}
+% I simulated and built a switch-mode power supply based on the buck converter topology, achieving an output ripple of less than 1\%. This project allowed me to apply my understanding of control systems and power electronics to create a practical device. It also required me to use my skills in simulation and prototyping to design and test the power supply. Overall, this project was a valuable learning experience and helped to further my knowledge and experience in electrical engineering design.
+
+% \subsection{Temperature Sensor}
+% I designed and built a temperature sensor using the ATmega328P and programmed the logic in Assembly. I gained an appreciation for the important role that microcontrollers play in various applications and developed a deeper understanding of low-level programming concepts.
+
+% \subsection{Multi-Player Wordle}
+% Collaborated with a team of 5 to develop \href{https://github.com/witseie-elen4010/2022-group-lab-001}{MultiWordle}, a multiplayer version of Wordle. The tech--stack included JavaScript, Express, HTML, CSS, GitHub Actions, and MongoDB. 
+
+% \subsection{Titanic -- Machine Learning from Disaster}
+% Worked with the Random Forest Classifier
+
+\begin{mysection}{Honours and Awards}
+\subheadSkip
+\subheading{Isazi Prize} \hfill \location{University of the Witwatersrand}
+
+
+\hspace{1em} Awarded to the top 5 information engineering students who achieved an aggregate of 70\% and above in their third year of study.
+
+\subheadSkip
+\subheading{The Dean's List} \hfill \location{University of the Witwatersrand}
+
+\hspace{1em} The Dean's list recognises the top 10\% of students provided that a minimum average/aggregate of at least 70\% is obtained on a full curriculum.
+
+\subheadSkip
+\subheading{Wits Mathematics Competition} \hfill \location{University of the Witwatersrand}
+
+\hspace{1em} Selected to represent King David High School, Linksfield  at the Wits mathematics competition in 2018. 
+
+\end{mysection}
+
+
+
+
+% \hfill \date{2021}
+% \end{mysection}
+% \begin{table}[h]
+% \small
+% \begin{tabular}{rll}
+% \textbf{Isazi Prize}  & \multicolumn{2}{l}{\multirow{3}{*}{\begin{tabular}[c]{@{}p{12cm}@{}}
+% \vspace{-0.5cm}
+% Awarded to the top 5 information engineering students who achieved an aggregate of 70\% and above in their third year of study.\end{tabular}}}        \\
+% % \color{gray}{University of Witwatersrand}                                   & \multicolumn{2}{l}{}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               \\
+% \textit{2021}                            & \multicolumn{2}{l}{}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               \\ \\
+% \textbf{The Dean's List} & \multicolumn{2}{l}{\multirow{3}{*}{\begin{tabular}[c]{@{}p{12cm}@{}}
+% \vspace{-0.5cm}
+% The Dean's list recognises the top 10\% of students provided that a minimum average/aggregate of at least 70\% is obtained on a full curriculum.
+% \end{tabular}}} \\
+% \color{gray}{University of Witwatersrand}                         & \multicolumn{2}{l}{}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               \\
+% \textit{2019 – 2020}                           & \multicolumn{2}{l}{}   \\\\
+% \textbf{Mathematics Competition} & \multicolumn{2}{l}{\multirow{3}{*}{\begin{tabular}[c]{@{}p{12cm}@{}}
+% \vspace{-0.5cm}
+% Selected to represent King David High School, Linksfield  at the Wits mathematics competition in 2018. 
+% \end{tabular}}} \\
+% \color{gray}{University of Witwatersrand}                         & \multicolumn{2}{l}{}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               \\
+% \textit{2018}                           & \multicolumn{2}{l}{}                                                                                                                                           
+% \end{tabular}
+% \end{table}
+% \begin{itemize}
+%     \item \textbf{Isazi Prize (2021).} Awarded to the Top 5 Information Engineering Students who Achieved an Aggregate of 70\% and above in their Third Year of Study.
+%         \item \textbf{Dean's List (2019 -- 2020).} The Dean's list recognises the top 10\% of students provided that a minimum average/aggregate of at least 70\% is obtained on a full curriculum.
+%     \item \textbf{Wits Mathematics competition (2017).} 
+% \end{itemize}
+
+\end{document}
