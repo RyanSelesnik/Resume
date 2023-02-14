@@ -8,8 +8,10 @@
 \usepackage{microtype, xspace}
 \usepackage{hyperref}
 
-\newcommand{\hmargin}{1.8cm}
-\geometry{top=1.0cm,
+\usepackage[bitstream-charter]{mathdesign}
+
+\newcommand{\hmargin}{1.5cm}
+\geometry{top=0.2cm,
     bottom=2.0cm,
     left=\hmargin,
     right=\hmargin}
@@ -42,7 +44,7 @@
 \newcommand{\contentType}[1]{\textit{#1}}
 
 \newcommand{\heading}[1]{
-\makebox[0pt][l]{\Large \sc \hspace{2pt}#1}
+\makebox[0pt][l]{\large\bfseries\scshape\raggedright\hspace{2pt}#1}
 \rule[-0.7ex]{\columnwidth}{0.5pt}\vspace{1.0ex}
 }
 
@@ -71,7 +73,7 @@
 \begin{document}
 
 \begin{center}
-\textsc{\textbf{\huge Ryan Selesnik}}
+\textsc{\textbf{\Large Ryan Selesnik}}
 
 \vspace{.2em}
 \footnotesize{\textit{Johannesburg, South Africa}}
@@ -82,10 +84,10 @@
 \begin{tabular}{c|c|c}
 
  \href{mailto:selesnikryan@gmail.com}{selesnikryan@gmail.com}     &  \texttt{+}27~799~932252  & \href{https://www.linkedin.com/in/ryan-s-09850613b/}{LinkedIn} 
-    
 \end{tabular}}
-
 \end{center}
+\vspace{-0.8cm}
+
 
  %
  %    
@@ -99,6 +101,19 @@
  %            \textbf{Skills include:} A strong programming background in C/C\texttt{++} and Python; Extensive experience simulating control, stochastic, and communication systems using LTspice, \textsc{Matlab}, and \textsc{Simulink}; Data analysis and visualisation using the scientific Python stack (NumPy, Matplotlib, Pandas); Machine Learning with PyTorch, HuggingFace and scikit-learn; Proficient in Bash/Zsh and the Unix core utilities; Working with Linux, macOS, and Windows; Git and GitHub; {\LaTeX}; Arduino and Raspberry Pi; Prototyping and testing with an oscilloscope; Full-stack web development; Automating developer environments with Vim and shell scripts; Experience with multi-threading and concurrent programming in C/C\texttt{++}, Python, Java, and Go.
  %        
 % \end{mysection} 
+
+\begin{mysection}{Education}
+        \subheading{The University of the Witwatersrand} \hfill \location{Johannesburg, South Africa}
+
+        \textit{BSc (Eng) Electrical \& Infromation Engineering} (with Distinction) \hfill \date{2019 \rangesep  2022}
+            
+        \subheadSkip
+        \subheading{King David High School, Linksfield} \hfill  \location{Johannesburg, South Africa}
+
+\textit{National Senior Certificate (Independent Examination Board)} \hfill \date{2014 \rangesep 2018}
+    \end{mysection}
+
+
 \begin{mysection}{Skills}
     \textbf{Programming:} C/C\texttt{++}, Python, \textsc{Matlab}, Mathematica, Ruby
 
@@ -115,40 +130,7 @@
     \textbf{Shell and Unix:} Bash/Zsh, Unix core utilities
 
 \end{mysection}
-
-\begin{mysection}{Education}
-        \subheading{The University of the Witwatersrand} \hfill \location{Johannesburg, South Africa}
-
-        \textit{BSc (Eng) Electrical \& Infromation Engineering} (with Distinction) \hfill \date{2019 \rangesep  2022}
-            
-        \subheadSkip
-        \subheading{King David High School, Linksfield} \hfill  \location{Johannesburg, South Africa}
-
-\textit{National Senior Certificate (Independent Examination Board)} \hfill \date{2014 \rangesep 2018}
-    \end{mysection}
-\begin{mysection}{Experience}
- \subheadSkip
-        \subheading{Stream -- A Division of VAT IT} \hfill \location{Johannesburg, South Africa}
-
-        \textit{Software Engineering Intern}  \hfill \date{Nov 2020 \rangesep Jan 2021}
-
-        \begin{itemize}
-            \item Developed a versatile PDF generation system using Ruby, JSON, and Microsoft's Mail Merge.
-            \item Enabled non-technical employees to generate customer--specific PDFs, without relying on the software development team, thereby minimising Stream's opportunity costs.
-        \end{itemize}   
-\subheadSkip
-        \subheading{Stream -- A Division of VAT IT} \hfill \location{Johannesburg, South Africa}
-
-        \textit{Software Engineering Intern}  \hfill \date{Dec 2021 \rangesep Jan 2022}
-
-        \begin{itemize}
-         \item Wrote a Ruby script to parse PDFs to structured data. This eliminated the tedious task of looking up duty and tax information for imported products.
-    \item Developed a customisable message dashboard system using a headless Content Management System, Vue, Node.js, HTML, and CSS, enabling non-technical employees to edit Stream's website directly.
-    \item Wrote two sets of comprehensive documentation for the dashboard system. One for the developers and another for the non-technical employees.
-        \end{itemize}           
-\end{mysection}
-
-\begin{mysection}{Projects}
+\begin{mysection}{Notable Projects}
     
     \subheading{Final Year Investigation Project} \hfill \contentType{Machine Learning}
          
@@ -186,16 +168,38 @@
  \subheadSkip
  \subheading{Multi-player Worlde} \hfill \contentType{Full-stack Web Development}
 \begin{itemize}
-    \item Collaborated with a team of 5 to develop \href{https://github.com/witseie-elen4010/2022-group-lab-001}{MultiWordle}, a multiplayer version of Wordle. The tech--stack included JavaScript, Express, HTML, CSS, GitHub Actions, and MongoDB. 
+    \item Collaborated with a team of five to develop \href{https://github.com/witseie-elen4010/2022-group-lab-001}{MultiWordle}, a multiplayer version of Wordle. The tech--stack included JavaScript, Express, HTML, CSS, GitHub Actions, and MongoDB. 
 \end{itemize}
  \subheadSkip
 
  \subheading{Centipede\texttt{++}} \hfill \contentType{Software Development}
 \begin{itemize}
-    \item Collaborated with a team of 2 to develop the Centipede computer game in C\texttt{++}.
+    \item Collaborated with a team of two to develop the Centipede computer game in C\texttt{++}.
 \end{itemize}
 
 
+\end{mysection}
+
+\begin{mysection}{Experience}
+ \subheadSkip
+        \subheading{Stream -- A Division of VAT IT} \hfill \location{Johannesburg, South Africa}
+
+        \textit{Software Engineering Intern}  \hfill \date{Nov 2020 \rangesep Jan 2021}
+
+        \begin{itemize}
+            \item Developed a versatile PDF generation system using Ruby, JSON, and Microsoft's Mail Merge.
+            \item Enabled non-technical employees to generate customer--specific PDFs, without relying on the software development team, thereby minimising Stream's opportunity costs.
+        \end{itemize}   
+\subheadSkip
+        \subheading{Stream -- A Division of VAT IT} \hfill \location{Johannesburg, South Africa}
+
+        \textit{Software Engineering Intern}  \hfill \date{Dec 2021 \rangesep Jan 2022}
+
+        \begin{itemize}
+         \item Wrote a Ruby script to parse PDFs to structured data. This eliminated the tedious task of looking up duty and tax information for imported products.
+    \item Developed a customisable message dashboard system using a headless Content Management System, Vue, Node.js, HTML, and CSS, enabling non-technical employees to edit Stream's website directly.
+    \item Wrote two sets of comprehensive documentation for the dashboard system. One for the developers and another for the non-technical employees.
+        \end{itemize}           
 \end{mysection}
 
 \begin{mysection}{Honours and Awards}
